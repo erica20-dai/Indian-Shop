@@ -1,0 +1,31 @@
+/* .item{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin: 2px;
+    justify-content: center;
+} */
+
+div{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+    padding-top: 40px;
+
+}
+/*telephone*/
+@media (max-width: 768px) {
+    div {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+/*tablette*/
+@media  (max-width: 1024px) {
+    div {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+

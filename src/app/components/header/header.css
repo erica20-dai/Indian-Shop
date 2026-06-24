@@ -1,0 +1,29 @@
+.debut{
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(226, 114, 166);
+}
+a {
+    text-decoration: none;
+      color: wheat;
+
+
+}
+ul{
+    display: flex;
+    justify-content: baseline;
+      list-style: none;
+      gap: 2rem;
+      padding: 10px;
+
+}
+#logo{
+    display: flex;
+    justify-content: start;
+    padding: 10px;
+    color: wheat;
+    font-size: 30px;
+    font-weight: 200;
+    font-family: cursive;
+}

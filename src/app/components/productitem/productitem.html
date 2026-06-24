@@ -1,0 +1,9 @@
+<a class="card" href="#">
+    <div>
+        <img [src]="product?.image ?? 'assets/images/product/fruit.jpg'" alt="product" />
+    </div>
+    <div class="nom">
+        <h4>{{ product?.name ?? 'produit1' }}</h4>
+        <p>{{ product?.description ?? 'print' }}</p>
+    </div>
+</a>

@@ -1,0 +1,14 @@
+/* div{
+   
+    height: calc(100vh-200vh);
+     max-width:  100%;
+    display: flex;
+    text-align: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin-top: 10px;
+    font-size: 20px;
+} */
+ div{
+    background-color: rgb(248, 231, 248);
+ }
