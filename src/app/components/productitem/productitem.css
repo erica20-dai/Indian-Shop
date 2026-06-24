@@ -1,6 +1,6 @@
 img{
-    height: 130px;
-    width:130px;
+    height: 200px;
+    width:200px;
     margin: 5px;
 
 }
@@ -14,7 +14,14 @@ img{
 .nom{
     font-size: 20px;
 }
+p{
+  border-radius: 10px; 
+  border: 2px solid rgb(226, 114, 166);  
+  background-color: rgb(226, 114, 166);
+  text-align: center;
+  color: white;
 
+}
 .card{
     text-decoration: none;
     display: flex;

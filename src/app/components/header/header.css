@@ -44,6 +44,28 @@ ul {
     width: auto;
 }
 
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: auto;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 24px;
+    height: 2px;
+    background: wheat;
+    margin-bottom: 5px;
+    border-radius: 2px;
+}
+
+.menu-toggle span:last-child {
+    margin-bottom: 0;
+}
+
 /* Tablet */
 @media (max-width: 1024px) {
   .debut {
@@ -61,31 +83,47 @@ ul {
 
 /* Phone */
 @media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
   .debut {
-    flex-direction: column;
-    align-items: stretch;
-    padding: 16px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 12px;
+    gap: 12px;
     overflow-x: hidden;
   }
 
   #logo {
-    width: 100%;
-    justify-content: center;
-    text-align: center;
+    width: auto;
+    justify-content: flex-start;
+    text-align: left;
     font-size: 28px;
-    margin-bottom: 10px;
+    margin-bottom: 0;
   }
 
   #menu {
     width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.25s ease;
+  }
+
+  #menu.open {
+    max-height: 500px;
   }
 
   ul {
+    width: 100%;
+    max-width: 100%;
     flex-direction: column;
     align-items: stretch;
-    width: 100%;
     gap: 0.85rem;
     padding: 0;
+    margin: 10px 0 0;
   }
 
   li {
@@ -95,41 +133,34 @@ ul {
   a {
     display: block;
     width: 100%;
+    box-sizing: border-box;
     padding: 12px 14px;
     border-radius: 10px;
     background: rgba(255, 255, 255, 0.08);
     text-align: center;
+    white-space: normal;
   }
 }
 
-/* Extra small phones: tighten spacing and prevent overflow */
+/* Extra small phones: tighter spacing */
 @media (max-width: 480px) {
   .debut {
-    padding: 10px 8px;
+    padding: 12px 10px;
     gap: 8px;
   }
 
   #logo {
     font-size: 22px;
     padding: 6px 0;
+    margin-bottom: 8px;
   }
 
   ul {
-    gap: 0.5rem;
-    padding: 0;
-    margin: 0;
+    gap: 0.6rem;
   }
 
   a {
-    padding: 8px 10px;
+    padding: 10px 12px;
     font-size: 14px;
-  }
-
-  /* Ensure links don't cause horizontal scroll */
-  #menu, ul, li, a {
-    max-width: 100%;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
   }
 }

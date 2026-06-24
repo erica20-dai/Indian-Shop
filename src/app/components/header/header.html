@@ -2,15 +2,20 @@
   <div id="logo">
     Indian-Shop
   </div>
-  <div id="menu">
+
+  <button class="menu-toggle" type="button" (click)="toggleMenu()" aria-label="Toggle navigation">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+  <div id="menu" [class.open]="menuOpen()">
     <ul>
       <li><a href="#">home</a></li>
       <li><a href="#">product</a></li>
       <li><a href="#">blog</a></li>
-      <li><a href="#">contact </a></li>
+      <li><a href="#">contact</a></li>
     </ul>
-    
-
   </div>
 </nav>
-           
+
