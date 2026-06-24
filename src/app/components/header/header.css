@@ -1,29 +1,135 @@
-.debut{
-    height: 100%;
+.debut {
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    padding: 18px 28px;
     background-color: rgb(226, 114, 166);
+    box-sizing: border-box;
 }
+
 a {
     text-decoration: none;
-      color: wheat;
-
-
-}
-ul{
-    display: flex;
-    justify-content: baseline;
-      list-style: none;
-      gap: 2rem;
-      padding: 10px;
-
-}
-#logo{
-    display: flex;
-    justify-content: start;
-    padding: 10px;
     color: wheat;
-    font-size: 30px;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: #fff;
+}
+
+ul {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    list-style: none;
+    gap: 1.5rem;
+    padding: 10px 0;
+    margin: 0;
+}
+
+#logo {
+    display: flex;
+    justify-content: flex-start;
+    padding: 10px 0;
+    color: wheat;
+    font-size: 32px;
     font-weight: 200;
     font-family: cursive;
+}
+
+#menu {
+    width: auto;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .debut {
+    padding: 16px 22px;
+  }
+
+  ul {
+    gap: 1rem;
+  }
+
+  #logo {
+    font-size: 30px;
+  }
+}
+
+/* Phone */
+@media (max-width: 768px) {
+  .debut {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 16px;
+    overflow-x: hidden;
+  }
+
+  #logo {
+    width: 100%;
+    justify-content: center;
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 10px;
+  }
+
+  #menu {
+    width: 100%;
+  }
+
+  ul {
+    flex-direction: column;
+    align-items: stretch;
+    width: 100%;
+    gap: 0.85rem;
+    padding: 0;
+  }
+
+  li {
+    width: 100%;
+  }
+
+  a {
+    display: block;
+    width: 100%;
+    padding: 12px 14px;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.08);
+    text-align: center;
+  }
+}
+
+/* Extra small phones: tighten spacing and prevent overflow */
+@media (max-width: 480px) {
+  .debut {
+    padding: 10px 8px;
+    gap: 8px;
+  }
+
+  #logo {
+    font-size: 22px;
+    padding: 6px 0;
+  }
+
+  ul {
+    gap: 0.5rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    padding: 8px 10px;
+    font-size: 14px;
+  }
+
+  /* Ensure links don't cause horizontal scroll */
+  #menu, ul, li, a {
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
 }

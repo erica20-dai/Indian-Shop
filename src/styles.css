@@ -1,1 +1,31 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Normalize box sizing to prevent layout overflow */
+*, *::before, *::after {
+	box-sizing: border-box;
+}
+
+/* Small screen refinements (320px - 375px) */
+@media (max-width: 375px) {
+	body {
+		font-size: 14px;
+		padding: 0 8px;
+	}
+
+	.debut {
+		padding: 12px 10px !important;
+	}
+
+	.container {
+		padding: 12px !important;
+	}
+
+	.product-list {
+		gap: 8px !important;
+		padding-top: 10px !important;
+	}
+
+	footer {
+		padding: 12px 10px !important;
+	}
+}
